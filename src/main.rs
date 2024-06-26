@@ -5,6 +5,7 @@ const LOG_FILE: &str = "/Users/klim/Projects/robius/shared-directory-utm/moxin/l
 fn main() {
     println!("Moxin was invoked with args: {:#?}", std::env::args().collect::<Vec<_>>());
 
+    std::fs::write(LOG_FILE, "started\n").unwrap();
     use std::io::Write;
     robius_url_handler::register_handler(handler);
     moxin::app::app_main()
