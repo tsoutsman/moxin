@@ -139,6 +139,7 @@ fn main() -> std::io::Result<()> {
         std::env::var("WASMEDGE_PLUGIN_PATH").ok()
     );
 
+
     run_moxin().unwrap();
     Ok(())
 }

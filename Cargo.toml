@@ -29,6 +29,7 @@ moxin-fake-backend = { path = "moxin-fake-backend" }
 makepad-widgets = { git = "https://github.com/jmbejar/makepad", branch = "moxin-release-v1" }
 
 robius-open = "0.1.0"
+robius-url-handler = { path = "../robius-url-handler" }
 
 chrono = "0.4"
 directories = "5.0.1"
@@ -131,6 +132,10 @@ elif [ "$CARGO_PACKAGER_HOST_OS" = linux ]; then \
 else exit 2; \
 fi; \
 """
+
+[[package.metadata.packager.deep_link_protocols]]
+schemes = ["moxin"]
+role = "editor"
 
 [package.metadata.packager.macos]
 minimum_system_version = "11.0"
